@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App</string>
+    <string name="reflect_demo">反射demo</string>
+    <string name="annotation_demo">注解demo</string>
 </resources>
