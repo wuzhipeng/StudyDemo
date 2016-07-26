@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         sb.append("doubleValue的值：").append(getFieldValue(obj, m)).append("\n");
 
         f = cls.getDeclaredField("mString");
-        setFieldValue(obj, f, "吴志鹏");
+        setFieldValue(obj, f, "Freeman");
         sb.append("mString的值：").append(getFieldValue(obj, f)).append("\n");
 
     }
@@ -132,11 +132,11 @@ public class MainActivity extends AppCompatActivity {
         Class cls3 = obj.getClass();
 
         sb.append("通过三种方式获取ReflectClass的类对象：\n")
-                .append("方式1：ReflectClass.class   \n\n")
+                .append("方式1：ReflectClass.class   \n")
                 .append(cls1)
-                .append("\n方式2：Class.forName(\"com.example.freeman.model.ReflectClass\")   \n\n")
+                .append("\n\n方式2：Class.forName(\"com.example.freeman.model.ReflectClass\")   \n")
                 .append(cls2)
-                .append("\n方式3：ReflectClass obj.getClass()   \n\n")
+                .append("\n\n方式3：ReflectClass obj.getClass()   \n")
                 .append(cls3);
     }
 
