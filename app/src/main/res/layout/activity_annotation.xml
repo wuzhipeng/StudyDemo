@@ -9,4 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.freeman.app.AnnotationActivity">
 
+    <TextView
+        android:id="@+id/annotation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="通过注解初始化view" />
+
+    <Button
+        android:id="@+id/annotation_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/annotation_text"
+        android:text="获取注解" />
+
 </RelativeLayout>
