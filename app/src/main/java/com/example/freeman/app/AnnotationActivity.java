@@ -7,9 +7,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.freeman.ViewAnnotation;
+import com.example.freeman.Annotation.AnnotationClass;
+import com.example.freeman.Annotation.TestAnnotation;
+import com.example.freeman.Annotation.ViewAnnotation;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class AnnotationActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -17,6 +20,8 @@ public class AnnotationActivity extends AppCompatActivity implements View.OnClic
     private TextView mText;
     @ViewAnnotation(R.id.annotation_btn)
     private Button mBtn;
+
+    private AnnotationClass person = new AnnotationClass();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,19 @@ public class AnnotationActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+    private void setPerson(AnnotationClass obj) throws Exception {
+        Class cls = obj.getClass();
+        Method method = cls.getDeclaredMethod("setPerson", String.class, String.class, int.class);
+        if (method != null) {
+            TestAnnotation annotation = method.getAnnotation(TestAnnotation.class);
+            String name = annotation.name();
+            String sex = annotation.sex();
+            int age = annotation.age();
+            method.setAccessible(true);
+            method.invoke(obj, name, sex, age);
+        }
+    }
+
     private void injectView() throws Exception {
         Class cls = this.getClass();
         Field[] fields = cls.getDeclaredFields();
@@ -54,11 +72,17 @@ public class AnnotationActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.annotation_btn:
-                Toast.makeText(this, "通过注解拿到了Button", Toast.LENGTH_LONG).show();
+                try {
+                    setPerson(person);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(this, person.getPerson(), Toast.LENGTH_LONG).show();
                 break;
         }
     }

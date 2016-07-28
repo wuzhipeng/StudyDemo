@@ -1,4 +1,4 @@
-package com.example.freeman;
+package com.example.freeman.Annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
