@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滚动ViewGroup内容的情况"/>
+
+    <Button
+        android:id="@+id/scroll_content_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滚吧..." />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滚动ViewGroup布局的情况"/>
+
+    <Button
+        android:id="@+id/scroll_layout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="滚吧..." />
+
+    <com.example.freeman.custom_view.ViewScrollViewGroup
+        android:id="@+id/mViewgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:background="@android:color/holo_red_dark"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:background="#82738472" />
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="fill_parent"
+            android:background="#99232345" />
+
+        <ImageView
+            android:id="@+id/mIv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/beauty" />
+
+    </com.example.freeman.custom_view.ViewScrollViewGroup>
+
+</LinearLayout>

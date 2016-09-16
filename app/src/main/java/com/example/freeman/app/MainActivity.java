@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button reflectBtn;
     Button annotationBtn;
     Button customViewBtn;
+    Button scrollViewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         reflectBtn = (Button) findViewById(R.id.reflect_btn);
         annotationBtn = (Button) findViewById(R.id.annotation_btn);
         customViewBtn = (Button) findViewById(R.id.custom_view_btn);
+        scrollViewBtn = (Button) findViewById(R.id.scroll_view_btn);
         reflectBtn.setOnClickListener(this);
         annotationBtn.setOnClickListener(this);
         customViewBtn.setOnClickListener(this);
+        scrollViewBtn.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.custom_view_btn:
                 intent = new Intent(this, CustomViewActivity.class);
+                startActivity(intent);
+                break;case R.id.scroll_view_btn:
+                intent = new Intent(this, ViewScrollActivity.class);
                 startActivity(intent);
                 break;
             default:
