@@ -16,4 +16,11 @@
         android:layout_below="@id/reflect_btn"
         android:text="@string/annotation_demo" />
 
+    <Button
+        android:id="@+id/custom_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/annotation_btn"
+        android:text="@string/custom_view_demo" />
+
 </RelativeLayout>

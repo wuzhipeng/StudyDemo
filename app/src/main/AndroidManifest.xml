@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReflectActivity" />
-        <activity android:name=".AnnotationActivity"></activity>
+        <activity android:name=".AnnotationActivity" />
+        <activity android:name=".CustomViewActivity"></activity>
     </application>
 
 </manifest>

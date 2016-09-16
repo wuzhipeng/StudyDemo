@@ -2,4 +2,5 @@
     <string name="app_name">App</string>
     <string name="reflect_demo">反射demo</string>
     <string name="annotation_demo">注解demo</string>
+    <string name="custom_view_demo">自定义View Demo</string>
 </resources>
