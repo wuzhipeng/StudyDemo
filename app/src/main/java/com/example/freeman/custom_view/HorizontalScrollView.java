@@ -24,13 +24,11 @@ public class HorizontalScrollView extends ViewGroup {
     private VelocityTracker mVelocityTracker;
 
     public HorizontalScrollView(Context context) {
-        super(context);
-        init();
+        this(context, null);
     }
 
     public HorizontalScrollView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        init();
+        this(context, attrs, 0);
     }
 
     public HorizontalScrollView(Context context, AttributeSet attrs, int defStyle) {
@@ -122,9 +120,10 @@ public class HorizontalScrollView extends ViewGroup {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int measuredWidth = 0;
-        int measuredHeight = 0;
+        int measuredWidth;
+        int measuredHeight;
         final int childCount = getChildCount();
+        // 测量每个子view
         measureChildren(widthMeasureSpec, heightMeasureSpec);
 
         int widthSpaceSize = MeasureSpec.getSize(widthMeasureSpec);
@@ -132,7 +131,7 @@ public class HorizontalScrollView extends ViewGroup {
         int heightSpaceSize = MeasureSpec.getSize(heightMeasureSpec);
         int heightSpecMode = MeasureSpec.getMode(heightMeasureSpec);
         if (childCount == 0) {
-            setMeasuredDimension(0, 0);
+            setMeasuredDimension(widthMeasureSpec, heightMeasureSpec);
         } else if (widthSpecMode == MeasureSpec.AT_MOST && heightSpecMode == MeasureSpec.AT_MOST) {
             final View childView = getChildAt(0);
             measuredWidth = childView.getMeasuredWidth() * childCount;
@@ -167,7 +166,7 @@ public class HorizontalScrollView extends ViewGroup {
     }
 
     private void smoothScrollBy(int dx, int dy) {
-        mScroller.startScroll(getScrollX(), 0, dx, 0, 500);
+        mScroller.startScroll(getScrollX(), 0, dx, dy, 500);
         invalidate();
     }
 
@@ -181,6 +180,7 @@ public class HorizontalScrollView extends ViewGroup {
 
     @Override
     protected void onDetachedFromWindow() {
+        // 回收
         mVelocityTracker.recycle();
         super.onDetachedFromWindow();
     }
