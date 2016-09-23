@@ -42,6 +42,7 @@ captures/
 *.jks
 /
 /.idea
+.idea/
 
 gradle/
 gradlew
