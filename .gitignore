@@ -49,7 +49,7 @@ captures/
 .idea/modules.xml
 .idea/runConfigurations.xml
 .idea/vcs.xml
-/.idea/
+.idea/gradle.xml
 gradle/
 gradlew
 gradlew.bat
