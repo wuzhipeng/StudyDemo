@@ -41,6 +41,7 @@ captures/
 # Keystore files
 *.jks
 /
+.idea/
 .idea/compiler.xml
 .idea/copyright/
 .idea/encodings.xml
