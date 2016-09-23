@@ -12,5 +12,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ViewAnnotation {
+    /**
+     * 只有一个方法时命名为value，default后面是默认值
+     * @return
+     */
     int value() default 0;
 }

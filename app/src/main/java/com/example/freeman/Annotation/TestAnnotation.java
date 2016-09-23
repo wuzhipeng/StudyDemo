@@ -11,6 +11,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TestAnnotation {
+    /**
+     * 姓名
+     * @return
+     */
     String name() default "";
 
     String sex() default "男";
