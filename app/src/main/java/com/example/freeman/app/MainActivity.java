@@ -11,6 +11,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button annotationBtn;
     Button customViewBtn;
     Button scrollViewBtn;
+    Button deadLockBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         annotationBtn = (Button) findViewById(R.id.annotation_btn);
         customViewBtn = (Button) findViewById(R.id.custom_view_btn);
         scrollViewBtn = (Button) findViewById(R.id.scroll_view_btn);
+        deadLockBtn = (Button) findViewById(R.id.dead_lock_btn);
         reflectBtn.setOnClickListener(this);
         annotationBtn.setOnClickListener(this);
         customViewBtn.setOnClickListener(this);
         scrollViewBtn.setOnClickListener(this);
+        deadLockBtn.setOnClickListener(this);
     }
 
     @Override
@@ -41,8 +44,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.custom_view_btn:
                 intent = new Intent(this, CustomViewActivity.class);
                 startActivity(intent);
-                break;case R.id.scroll_view_btn:
+                break;
+            case R.id.scroll_view_btn:
                 intent = new Intent(this, ViewScrollActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.dead_lock_btn:
+                intent = new Intent(this, DeadLockDemoActivity.class);
                 startActivity(intent);
                 break;
             default:

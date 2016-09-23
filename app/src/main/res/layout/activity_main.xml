@@ -23,11 +23,18 @@
         android:layout_below="@id/annotation_btn"
         android:text="@string/custom_view_demo" />
 
-            <Button
-                android:id="@+id/scroll_view_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/custom_view_btn"
-                android:text="@string/scroll_view_demo" />
+    <Button
+        android:id="@+id/scroll_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom_view_btn"
+        android:text="@string/scroll_view_demo" />
 
-        </RelativeLayout>
+    <Button
+        android:id="@+id/dead_lock_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll_view_btn"
+        android:text="@string/dead_lock_demo" />
+
+</RelativeLayout>

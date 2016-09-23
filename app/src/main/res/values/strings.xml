@@ -4,4 +4,5 @@
     <string name="annotation_demo">注解demo</string>
     <string name="custom_view_demo">自定义View Demo</string>
     <string name="scroll_view_demo">滚动View Demo</string>
+    <string name="dead_lock_demo">死锁 Demo</string>
 </resources>

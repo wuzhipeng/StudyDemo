@@ -19,6 +19,7 @@
         <activity android:name=".AnnotationActivity" />
         <activity android:name=".CustomViewActivity"/>
         <activity android:name=".ViewScrollActivity"/>
+        <activity android:name=".DeadLockDemoActivity"/>
     </application>
 
 </manifest>
