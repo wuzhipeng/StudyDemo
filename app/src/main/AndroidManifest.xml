@@ -17,9 +17,11 @@
         </activity>
         <activity android:name=".ReflectActivity" />
         <activity android:name=".AnnotationActivity" />
-        <activity android:name=".CustomViewActivity"/>
-        <activity android:name=".ViewScrollActivity"/>
-        <activity android:name=".DeadLockDemoActivity"/>
+        <activity android:name=".CustomViewActivity" />
+        <activity android:name=".ViewScrollActivity" />
+        <activity android:name=".DeadLockDemoActivity" />
+        <activity android:name=".ThreadDemoActivity" />
+        <activity android:name=".SynchronizeDemoActivity"></activity>
     </application>
 
 </manifest>

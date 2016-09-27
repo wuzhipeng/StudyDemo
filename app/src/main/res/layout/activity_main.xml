@@ -31,10 +31,10 @@
         android:text="@string/scroll_view_demo" />
 
     <Button
-        android:id="@+id/dead_lock_btn"
+        android:id="@+id/thread_demo_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/scroll_view_btn"
-        android:text="@string/dead_lock_demo" />
+        android:text="@string/thread_demo" />
 
 </RelativeLayout>
