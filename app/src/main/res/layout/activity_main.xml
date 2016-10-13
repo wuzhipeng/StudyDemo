@@ -37,4 +37,11 @@
         android:layout_below="@id/scroll_view_btn"
         android:text="@string/thread_demo" />
 
+    <Button
+        android:id="@+id/recyclerview_demo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thread_demo_btn"
+        android:text="@string/recyclerview_demo" />
+
 </RelativeLayout>

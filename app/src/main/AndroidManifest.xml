@@ -21,7 +21,8 @@
         <activity android:name=".ViewScrollActivity" />
         <activity android:name=".DeadLockDemoActivity" />
         <activity android:name=".ThreadDemoActivity" />
-        <activity android:name=".SynchronizeDemoActivity"></activity>
+        <activity android:name=".SynchronizeDemoActivity" />
+        <activity android:name=".RecyclerViewActivity"></activity>
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button customViewBtn;
     Button scrollViewBtn;
     Button deadLockBtn;
+    Button recyclerviewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         customViewBtn = (Button) findViewById(R.id.custom_view_btn);
         scrollViewBtn = (Button) findViewById(R.id.scroll_view_btn);
         deadLockBtn = (Button) findViewById(R.id.thread_demo_btn);
+        recyclerviewBtn = (Button) findViewById(R.id.recyclerview_demo_btn);
         reflectBtn.setOnClickListener(this);
         annotationBtn.setOnClickListener(this);
         customViewBtn.setOnClickListener(this);
         scrollViewBtn.setOnClickListener(this);
         deadLockBtn.setOnClickListener(this);
+        recyclerviewBtn.setOnClickListener(this);
     }
 
     @Override
@@ -51,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.thread_demo_btn:
                 intent = new Intent(this, ThreadDemoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.recyclerview_demo_btn:
+                intent = new Intent(this, RecyclerViewActivity.class);
                 startActivity(intent);
                 break;
             default:
